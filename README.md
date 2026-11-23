@@ -4,7 +4,7 @@ AuthSentry reads **Linux OpenSSH auth logs** and **Windows Security events (4624
 
 It is a small, readable detection pipeline for learning SOC triage: **parse → normalise → detect → report**. It is not a SIEM and does not replace Wazuh, Splunk or Sentinel.
 
-**Live demo:** see the link in the repo description. Paste a log or load a sample, then press Analyze.
+**Live demo:** https://authsentry.vercel.app. Paste a log or load a sample, then press Analyze.
 
 ## Detection rules (`authsentry/rules/default.yaml`)
 
