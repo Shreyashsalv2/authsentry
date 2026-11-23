@@ -1,0 +1,89 @@
+# AuthSentry default detection rules.
+# Types:
+#   threshold - at least `threshold` events with `outcome` from one group inside `window_minutes`
+#   distinct  - at least `threshold` distinct values of `distinct_field` (with `outcome`) from one group inside the window
+#   sequence  - a successful login that follows at least `threshold` failures from the same group inside the window
+# group_by / distinct_field can use: src_ip, user, host, source, workstation
+
+rules:
+  - id: AS-001
+    name: Brute force against one account
+    type: threshold
+    outcome: failure
+    group_by: [src_ip, user]
+    threshold: 5
+    window_minutes: 5
+    severity: high
+    attack:
+      technique: T1110.001
+      name: "Brute Force: Password Guessing"
+      tactic: Credential Access
+    description: Many failed logins for the same account from the same source in a short time.
+    response:
+      - Check whether any login from this source later succeeded (rule AS-003).
+      - Look up the source IP (internal asset or external; reputation and geolocation).
+      - If the source is external and not expected, block it at the firewall or with fail2ban.
+      - Confirm the targeted account uses MFA or key-only SSH, and that password login is disabled where possible.
+
+  - id: AS-002
+    name: Password spraying from one source
+    type: distinct
+    outcome: failure
+    group_by: [src_ip]
+    distinct_field: user
+    threshold: 4
+    window_minutes: 10
+    severity: high
+    attack:
+      technique: T1110.003
+      name: "Brute Force: Password Spraying"
+      tactic: Credential Access
+    description: One source tries many different accounts, usually with a few common passwords.
+    response:
+      - List every account the source tried and flag the ones that exist.
+      - Check whether any of those accounts logged in successfully afterwards (rule AS-003).
+      - Block the source if it is external; if it is an internal host, isolate it and check it for malware.
+      - Reset passwords for any targeted account that authenticated during the window.
+
+  - id: AS-003
+    name: Successful login after repeated failures
+    type: sequence
+    group_by: [src_ip]
+    threshold: 3
+    window_minutes: 10
+    severity: critical
+    attack:
+      technique: T1078
+      name: Valid Accounts
+      tactic: Initial Access
+    description: A source that kept failing then logged in, so a guessed or stolen password may now be in use.
+    response:
+      - Treat the account as possibly compromised until proven otherwise.
+      - Contact the account owner to confirm whether the login was theirs.
+      - Disable or lock the account, end its sessions, and reset its credentials if the login is not confirmed.
+      - Review what the session did after login (commands, file access, new users, scheduled tasks).
+
+  - id: AS-004
+    name: Account lockout burst
+    type: threshold
+    outcome: lockout
+    group_by: [host]
+    threshold: 3
+    window_minutes: 15
+    severity: medium
+    attack:
+      technique: T1110
+      name: Brute Force
+      tactic: Credential Access
+    description: Several accounts locked out on the same host in a short time.
+    response:
+      - Find the caller computer for each lockout (CallerComputerName in event 4740).
+      - Check that machine for a stale saved password, a misconfigured service, or malware.
+      - Look for failed logins (4625) from the same source before the lockouts (rules AS-001 and AS-002).
+      - Unlock the accounts only after the cause is found.
+
+escalation:
+  critical: Escalate to L2 / incident response now and open a P1 ticket.
+  high: Escalate to L2 within 1 hour if triage confirms the activity is malicious.
+  medium: Open a ticket and review it before the next shift handover.
+  low: Record it for trend analysis.

@@ -1,0 +1,272 @@
+[
+ {
+  "TimeCreated": "2026-11-23T10:00:00.0000000Z",
+  "Id": 4624,
+  "MachineName": "DC01.corp.example",
+  "TargetUserName": "jdoe",
+  "TargetDomainName": "CORP",
+  "IpAddress": "10.0.0.15",
+  "LogonType": 3,
+  "WorkstationName": "WS-031"
+ },
+ {
+  "TimeCreated": "2026-11-23T10:01:00.0000000Z",
+  "Id": 4624,
+  "MachineName": "DC01.corp.example",
+  "TargetUserName": "priya",
+  "TargetDomainName": "CORP",
+  "IpAddress": "10.0.0.21",
+  "LogonType": 2,
+  "WorkstationName": "WS-044"
+ },
+ {
+  "TimeCreated": "2026-11-23T10:02:00.5112340Z",
+  "Id": 4625,
+  "MachineName": "DC01.corp.example",
+  "TargetUserName": "Administrator",
+  "TargetDomainName": "CORP",
+  "IpAddress": "203.0.113.77",
+  "LogonType": 10,
+  "WorkstationName": "KALI"
+ },
+ {
+  "TimeCreated": "2026-11-23T10:02:20.5112340Z",
+  "Id": 4625,
+  "MachineName": "DC01.corp.example",
+  "TargetUserName": "Administrator",
+  "TargetDomainName": "CORP",
+  "IpAddress": "203.0.113.77",
+  "LogonType": 10,
+  "WorkstationName": "KALI"
+ },
+ {
+  "TimeCreated": "2026-11-23T10:02:40.5112340Z",
+  "Id": 4625,
+  "MachineName": "DC01.corp.example",
+  "TargetUserName": "Administrator",
+  "TargetDomainName": "CORP",
+  "IpAddress": "203.0.113.77",
+  "LogonType": 10,
+  "WorkstationName": "KALI"
+ },
+ {
+  "TimeCreated": "2026-11-23T10:03:00.5112340Z",
+  "Id": 4625,
+  "MachineName": "DC01.corp.example",
+  "TargetUserName": "Administrator",
+  "TargetDomainName": "CORP",
+  "IpAddress": "203.0.113.77",
+  "LogonType": 10,
+  "WorkstationName": "KALI"
+ },
+ {
+  "TimeCreated": "2026-11-23T10:03:20.5112340Z",
+  "Id": 4625,
+  "MachineName": "DC01.corp.example",
+  "TargetUserName": "Administrator",
+  "TargetDomainName": "CORP",
+  "IpAddress": "203.0.113.77",
+  "LogonType": 10,
+  "WorkstationName": "KALI"
+ },
+ {
+  "TimeCreated": "2026-11-23T10:03:40.5112340Z",
+  "Id": 4625,
+  "MachineName": "DC01.corp.example",
+  "TargetUserName": "Administrator",
+  "TargetDomainName": "CORP",
+  "IpAddress": "203.0.113.77",
+  "LogonType": 10,
+  "WorkstationName": "KALI"
+ },
+ {
+  "TimeCreated": "2026-11-23T10:04:00.5112340Z",
+  "Id": 4625,
+  "MachineName": "DC01.corp.example",
+  "TargetUserName": "Administrator",
+  "TargetDomainName": "CORP",
+  "IpAddress": "203.0.113.77",
+  "LogonType": 10,
+  "WorkstationName": "KALI"
+ },
+ {
+  "TimeCreated": "2026-11-23T10:04:50.0000000Z",
+  "Id": 4624,
+  "MachineName": "DC01.corp.example",
+  "TargetUserName": "Administrator",
+  "TargetDomainName": "CORP",
+  "IpAddress": "203.0.113.77",
+  "LogonType": 10,
+  "WorkstationName": "KALI"
+ },
+ {
+  "TimeCreated": "2026-11-23T10:20:00.0000000Z",
+  "Id": 4625,
+  "MachineName": "DC01.corp.example",
+  "TargetUserName": "jsmith",
+  "TargetDomainName": "CORP",
+  "IpAddress": "10.0.0.52",
+  "LogonType": 3,
+  "WorkstationName": "WS-114"
+ },
+ {
+  "TimeCreated": "2026-11-23T10:20:15.0000000Z",
+  "Id": 4625,
+  "MachineName": "DC01.corp.example",
+  "TargetUserName": "jsmith",
+  "TargetDomainName": "CORP",
+  "IpAddress": "10.0.0.52",
+  "LogonType": 3,
+  "WorkstationName": "WS-114"
+ },
+ {
+  "TimeCreated": "2026-11-23T10:20:30.0000000Z",
+  "Id": 4625,
+  "MachineName": "DC01.corp.example",
+  "TargetUserName": "jsmith",
+  "TargetDomainName": "CORP",
+  "IpAddress": "10.0.0.52",
+  "LogonType": 3,
+  "WorkstationName": "WS-114"
+ },
+ {
+  "TimeCreated": "2026-11-23T10:20:31.0000000Z",
+  "Id": 4740,
+  "MachineName": "DC01.corp.example",
+  "TargetUserName": "jsmith",
+  "TargetDomainName": "CORP",
+  "CallerComputerName": "WS-114"
+ },
+ {
+  "TimeCreated": "2026-11-23T10:22:00.0000000Z",
+  "Id": 4625,
+  "MachineName": "DC01.corp.example",
+  "TargetUserName": "akumar",
+  "TargetDomainName": "CORP",
+  "IpAddress": "10.0.0.52",
+  "LogonType": 3,
+  "WorkstationName": "WS-114"
+ },
+ {
+  "TimeCreated": "2026-11-23T10:22:15.0000000Z",
+  "Id": 4625,
+  "MachineName": "DC01.corp.example",
+  "TargetUserName": "akumar",
+  "TargetDomainName": "CORP",
+  "IpAddress": "10.0.0.52",
+  "LogonType": 3,
+  "WorkstationName": "WS-114"
+ },
+ {
+  "TimeCreated": "2026-11-23T10:22:30.0000000Z",
+  "Id": 4625,
+  "MachineName": "DC01.corp.example",
+  "TargetUserName": "akumar",
+  "TargetDomainName": "CORP",
+  "IpAddress": "10.0.0.52",
+  "LogonType": 3,
+  "WorkstationName": "WS-114"
+ },
+ {
+  "TimeCreated": "2026-11-23T10:22:31.0000000Z",
+  "Id": 4740,
+  "MachineName": "DC01.corp.example",
+  "TargetUserName": "akumar",
+  "TargetDomainName": "CORP",
+  "CallerComputerName": "WS-114"
+ },
+ {
+  "TimeCreated": "2026-11-23T10:24:00.0000000Z",
+  "Id": 4625,
+  "MachineName": "DC01.corp.example",
+  "TargetUserName": "svc_backup",
+  "TargetDomainName": "CORP",
+  "IpAddress": "10.0.0.52",
+  "LogonType": 3,
+  "WorkstationName": "WS-114"
+ },
+ {
+  "TimeCreated": "2026-11-23T10:24:15.0000000Z",
+  "Id": 4625,
+  "MachineName": "DC01.corp.example",
+  "TargetUserName": "svc_backup",
+  "TargetDomainName": "CORP",
+  "IpAddress": "10.0.0.52",
+  "LogonType": 3,
+  "WorkstationName": "WS-114"
+ },
+ {
+  "TimeCreated": "2026-11-23T10:24:30.0000000Z",
+  "Id": 4625,
+  "MachineName": "DC01.corp.example",
+  "TargetUserName": "svc_backup",
+  "TargetDomainName": "CORP",
+  "IpAddress": "10.0.0.52",
+  "LogonType": 3,
+  "WorkstationName": "WS-114"
+ },
+ {
+  "TimeCreated": "2026-11-23T10:24:31.0000000Z",
+  "Id": 4740,
+  "MachineName": "DC01.corp.example",
+  "TargetUserName": "svc_backup",
+  "TargetDomainName": "CORP",
+  "CallerComputerName": "WS-114"
+ },
+ {
+  "TimeCreated": "2026-11-23T10:26:00.0000000Z",
+  "Id": 4625,
+  "MachineName": "DC01.corp.example",
+  "TargetUserName": "mlopez",
+  "TargetDomainName": "CORP",
+  "IpAddress": "10.0.0.52",
+  "LogonType": 3,
+  "WorkstationName": "WS-114"
+ },
+ {
+  "TimeCreated": "2026-11-23T10:26:15.0000000Z",
+  "Id": 4625,
+  "MachineName": "DC01.corp.example",
+  "TargetUserName": "mlopez",
+  "TargetDomainName": "CORP",
+  "IpAddress": "10.0.0.52",
+  "LogonType": 3,
+  "WorkstationName": "WS-114"
+ },
+ {
+  "TimeCreated": "2026-11-23T10:26:30.0000000Z",
+  "Id": 4625,
+  "MachineName": "DC01.corp.example",
+  "TargetUserName": "mlopez",
+  "TargetDomainName": "CORP",
+  "IpAddress": "10.0.0.52",
+  "LogonType": 3,
+  "WorkstationName": "WS-114"
+ },
+ {
+  "TimeCreated": "2026-11-23T10:40:00.0000000Z",
+  "Id": 4625,
+  "MachineName": "DC01.corp.example",
+  "TargetUserName": "priya",
+  "TargetDomainName": "CORP",
+  "IpAddress": "10.0.0.21",
+  "LogonType": 2,
+  "WorkstationName": "WS-044"
+ },
+ {
+  "TimeCreated": "2026-11-23T10:40:12.0000000Z",
+  "Id": 4624,
+  "MachineName": "DC01.corp.example",
+  "TargetUserName": "priya",
+  "TargetDomainName": "CORP",
+  "IpAddress": "10.0.0.21",
+  "LogonType": 2,
+  "WorkstationName": "WS-044"
+ },
+ {
+  "TimeCreated": "2026-11-23T10:41:00.0000000Z",
+  "Id": 4672,
+  "MachineName": "DC01.corp.example",
+  "SubjectUserName": "priya"
+ }
+]

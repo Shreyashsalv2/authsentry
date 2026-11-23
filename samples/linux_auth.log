@@ -1,0 +1,37 @@
+Nov 23 08:58:10 web01 sshd[801]: Accepted publickey for alice from 192.0.2.10 port 50122 ssh2: ED25519 SHA256:q1w2e3r4t5y6u7i8o9p0
+Nov 23 08:58:11 web01 sshd[802]: pam_unix(sshd:session): session opened for user alice(uid=1001) by (uid=0)
+Nov 23 08:58:40 web01 CRON[803]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 23 09:00:01 web01 sshd[804]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.45  user=root
+Nov 23 09:00:01 web01 sshd[805]: Failed password for root from 203.0.113.45 port 41200 ssh2
+Nov 23 09:00:14 web01 sshd[806]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.45  user=root
+Nov 23 09:00:14 web01 sshd[807]: Failed password for root from 203.0.113.45 port 41201 ssh2
+Nov 23 09:00:27 web01 sshd[808]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.45  user=root
+Nov 23 09:00:27 web01 sshd[809]: Failed password for root from 203.0.113.45 port 41202 ssh2
+Nov 23 09:00:40 web01 sshd[810]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.45  user=root
+Nov 23 09:00:40 web01 sshd[811]: Failed password for root from 203.0.113.45 port 41203 ssh2
+Nov 23 09:00:53 web01 sshd[812]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.45  user=root
+Nov 23 09:00:53 web01 sshd[813]: Failed password for root from 203.0.113.45 port 41204 ssh2
+Nov 23 09:01:06 web01 sshd[814]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.45  user=root
+Nov 23 09:01:06 web01 sshd[815]: Failed password for root from 203.0.113.45 port 41205 ssh2
+Nov 23 09:01:19 web01 sshd[816]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.45  user=root
+Nov 23 09:01:19 web01 sshd[817]: Failed password for root from 203.0.113.45 port 41206 ssh2
+Nov 23 09:01:32 web01 sshd[818]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.45  user=root
+Nov 23 09:01:32 web01 sshd[819]: Failed password for root from 203.0.113.45 port 41207 ssh2
+Nov 23 09:01:51 web01 sshd[820]: Connection closed by authenticating user root 203.0.113.45 port 41207 [preauth]
+Nov 23 09:03:00 web01 sshd[821]: Invalid user admin from 198.51.100.23 port 52000
+Nov 23 09:03:00 web01 sshd[822]: Failed password for invalid user admin from 198.51.100.23 port 52000 ssh2
+Nov 23 09:03:30 web01 sshd[823]: Invalid user oracle from 198.51.100.23 port 52001
+Nov 23 09:03:30 web01 sshd[824]: Failed password for invalid user oracle from 198.51.100.23 port 52001 ssh2
+Nov 23 09:04:00 web01 sshd[825]: Failed password for ubuntu from 198.51.100.23 port 52002 ssh2
+Nov 23 09:04:30 web01 sshd[826]: Invalid user test from 198.51.100.23 port 52003
+Nov 23 09:04:30 web01 sshd[827]: Failed password for invalid user test from 198.51.100.23 port 52003 ssh2
+Nov 23 09:05:00 web01 sshd[828]: Failed password for postgres from 198.51.100.23 port 52004 ssh2
+Nov 23 09:05:30 web01 sshd[829]: Failed password for deploy from 198.51.100.23 port 52005 ssh2
+Nov 23 09:06:10 web01 sshd[830]: Accepted password for deploy from 198.51.100.23 port 52011 ssh2
+Nov 23 09:06:11 web01 sshd[831]: pam_unix(sshd:session): session opened for user deploy(uid=1003) by (uid=0)
+Nov 23 09:10:00 web01 sshd[832]: Failed password for bob from 192.0.2.10 port 50300 ssh2
+Nov 23 09:10:20 web01 sshd[833]: Accepted password for bob from 192.0.2.10 port 50301 ssh2
+Nov 23 09:20:00 web01 sshd[834]: Failed password for root from 203.0.113.99 port 60000 ssh2
+Nov 23 09:28:00 web01 sshd[835]: Failed password for root from 203.0.113.99 port 60001 ssh2
+Nov 23 09:36:00 web01 sshd[836]: Failed password for root from 203.0.113.99 port 60002 ssh2
+Nov 23 09:45:00 web01 sshd[837]: Received disconnect from 192.0.2.10 port 50122:11: disconnected by user

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AuthSentry — SOC log detection lab</title>
+<meta name="description" content="Paste a Linux auth.log or Windows Security events and get brute-force, password-spraying, login-after-failures and lockout alerts mapped to MITRE ATT&CK, with an incident report.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="./"><span class="logo" aria-hidden="true">◆</span> AuthSentry</a>
+    <nav><a href="#how">How it works</a><a href="https://github.com/Shreyashsalv2/authsentry" target="_blank" rel="noopener noreferrer">GitHub ↗</a></nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="intro">
+    <p class="kicker">SOC detection lab · Linux sshd + Windows Security events</p>
+    <h1>Find brute force and password spraying in auth logs</h1>
+    <p class="lead">Paste a Linux <code>auth.log</code> or Windows Security events (4624, 4625, 4740) as JSON. Four YAML detection rules run over the events, and each alert gets a MITRE ATT&amp;CK technique, evidence lines, triage steps and an escalation note.</p>
+  </section>
+
+  <section class="panel" aria-label="Log input">
+    <div class="toolbar">
+      <div class="samples">
+        <span class="muted">Try a sample:</span>
+        <button type="button" class="chip" data-sample="samples/linux_auth.log" data-format="linux">Linux auth.log</button>
+        <button type="button" class="chip" data-sample="samples/windows_security.json" data-format="windows">Windows Security JSON</button>
+      </div>
+      <div class="opts">
+        <label>Format
+          <select id="format"><option value="auto">Auto-detect</option><option value="linux">Linux sshd</option><option value="windows">Windows JSON</option></select>
+        </label>
+        <label>Year <input id="year" type="number" min="1970" max="2100" value="2026" title="Syslog lines have no year"></label>
+      </div>
+    </div>
+    <textarea id="log" spellcheck="false" placeholder="Nov 23 09:00:01 web01 sshd[805]: Failed password for root from 203.0.113.45 port 41200 ssh2"></textarea>
+    <div class="actions">
+      <button type="button" id="run" class="primary">Analyze</button>
+      <button type="button" id="file-btn" class="ghost">Open a file…</button>
+      <input id="file" type="file" accept=".log,.txt,.json,.jsonl" hidden>
+      <span id="status" class="muted" role="status" aria-live="polite"></span>
+    </div>
+    <p class="note">The log is analysed in memory by a serverless function and is not stored. Use test or redacted logs.</p>
+  </section>
+
+  <section id="results" class="results" hidden aria-label="Results">
+    <div id="summary" class="summary"></div>
+    <div id="alerts"></div>
+    <details class="panel report">
+      <summary>Incident report (Markdown)</summary>
+      <div class="actions"><button type="button" id="download" class="ghost">Download report.md</button></div>
+      <pre id="markdown"></pre>
+    </details>
+  </section>
+
+  <section id="how" class="how">
+    <h2>How it works</h2>
+    <div class="grid">
+      <div class="card"><h3>1 · Parse</h3><p>sshd <code>Failed …</code> / <code>Accepted …</code> lines (syslog or RFC 3339 timestamps) and Windows events 4624, 4625, 4740 (flat or nested JSON) become one event format. PAM duplicate lines are ignored so one attempt counts once.</p></div>
+      <div class="card"><h3>2 · Detect</h3><p>Sliding-window rules from <code>rules/default.yaml</code>: <b>AS-001</b> brute force (5 fails, same IP + account, 5 min) · <b>AS-002</b> password spraying (4 accounts from one IP, 10 min) · <b>AS-003</b> success after 3+ failures (10 min) · <b>AS-004</b> lockout burst (3 lockouts on a host, 15 min).</p></div>
+      <div class="card"><h3>3 · Report</h3><p>Each alert becomes an incident with severity, ATT&amp;CK technique (T1110.001, T1110.003, T1078, T1110), up to 10 evidence lines, triage steps and an escalation note.</p></div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <span>Built by Shreyash Singh Salv · sample logs are synthetic (RFC 5737 documentation IPs)</span>
+  <a href="https://github.com/Shreyashsalv2/authsentry" target="_blank" rel="noopener noreferrer">Source on GitHub ↗</a>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
